@@ -107,7 +107,7 @@ internal sealed class WidgetHelpers
         // Check if the specified widget provider is in the list.
         var include = enabledWidgetProviderIds.ToList().Contains(familyNamePartOfProviderId);
         Log.Logger()?.ReportInfo("WidgetHelpers", $"Found provider Id = {providerId}, include = {include}");
-        return include;
+        return !providerId.Contains("Peregrine");
     }
 
     public static string CreateWidgetCustomState(int ordinal)
